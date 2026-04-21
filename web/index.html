@@ -73,7 +73,16 @@
 <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="Menú principal">
   <div class="drawer-head">
-    <span class="drawer-brand">Proyecto 1625-D-2026</span>
+    <div class="drawer-brand-wrap">
+      <figure class="drawer-avatar" aria-hidden="true">
+        <img src="assets/martin-yeza.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <span class="avatar-fallback" style="display:none;">MY</span>
+      </figure>
+      <div>
+        <span class="drawer-brand">Proyecto 1625-D-2026</span>
+        <span class="drawer-subbrand">Martín Yeza</span>
+      </div>
+    </div>
     <button type="button" class="drawer-close" id="drawerClose" aria-label="Cerrar menú">×</button>
   </div>
   <div class="drawer-font-ctrl" role="group" aria-label="Tamaño de texto">
@@ -191,10 +200,16 @@
     </div>
   </div>
 
-  <div class="hero-author" aria-hidden="true">
-    <div class="author-line">FIRMA</div>
-    <div class="author-name">Martín Yeza</div>
-    <div class="author-sub">Diputado Nacional · Buenos Aires</div>
+  <div class="hero-author">
+    <figure class="author-avatar" aria-hidden="true">
+      <img src="assets/martin-yeza.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+      <span class="avatar-fallback" style="display:none;">MY</span>
+    </figure>
+    <div class="author-text">
+      <div class="author-line">FIRMA</div>
+      <div class="author-name">Martín Yeza</div>
+      <div class="author-sub">Diputado Nacional · Buenos Aires</div>
+    </div>
   </div>
 </header>
 
@@ -1174,7 +1189,13 @@
       <div>Fuente: texto oficial del proyecto + análisis ejecutivo</div>
       <div>Última actualización: <strong>20 de abril de 2026</strong></div>
       <div><a href="https://www.hcdn.gob.ar/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Consultar el expediente en hcdn.gob.ar →</a></div>
-      <div style="margin-top:10px;font-style:italic;opacity:.85;">Una propuesta abierta a conversaciones. — Martín Yeza</div>
+      <div class="footer-signature">
+        <figure class="footer-avatar" aria-hidden="true">
+          <img src="assets/martin-yeza.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <span class="avatar-fallback" style="display:none;">MY</span>
+        </figure>
+        <span>Una propuesta abierta a conversaciones.<br/><em>— Martín Yeza</em></span>
+      </div>
     </div>
     <div class="footer-tricolor" aria-hidden="true">
       <span class="tc celeste"></span>
