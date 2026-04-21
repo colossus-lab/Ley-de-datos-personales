@@ -237,55 +237,55 @@ const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').mat
   const content = {
     '1': {
       ref: 'Art. 3 · Art. 20 · Art. 40',
-      title: 'Categorización <em>tripartita</em>',
-      plain: 'Las PyMEs cumplen menos requisitos que las grandes. La ley es proporcional al tamaño y complejidad del tratamiento.',
+      title: 'Categorización <em>en tres niveles</em>',
+      plain: 'Las PyMEs cumplen menos requisitos que las grandes. La ley busca ser proporcional al tamaño y complejidad del tratamiento.',
       body: `
-        <p><strong>Básico · Intermedio · Avanzado.</strong> La reforma sustituye el régimen homogéneo de la Ley 25.326 por obligaciones proporcionales a la naturaleza, alcance, contexto y finalidades del tratamiento.</p>
+        <p><strong>Básico · Intermedio · Avanzado.</strong> Proponemos sustituir el régimen homogéneo de la Ley 25.326 por obligaciones proporcionales a la naturaleza, alcance, contexto y finalidades del tratamiento.</p>
         <p>La categorización determina <strong>tres variables</strong> en cascada:</p>
         <ul>
           <li><strong>Obligaciones materiales:</strong> medidas técnicas, registros, DPIA, DPO.</li>
           <li><strong>Topes sancionatorios:</strong> 0,5% — 2% — 3% de la facturación anual argentina del infractor.</li>
           <li><strong>Períodos de adecuación:</strong> las micro y pequeñas empresas clasificadas como básicas acceden a regímenes diferenciados.</li>
         </ul>
-        <p>Este esquema de <em>proporcionalidad real</em> es probablemente el aporte más valioso del proyecto desde la óptica del cumplimiento. Para una PyME argentina con bases transaccionales clásicas, ingresar al nivel básico puede significar ahorros por USD 5.000–20.000 anuales en contraste con una mediana (intermedio) en USD 50.000–150.000 y una gran corporación (avanzado, con DPO, OneTrust/TrustArc, certificaciones) en USD 500.000 o más.</p>
+        <p>Buscamos que una PyME argentina con bases transaccionales clásicas, al ingresar al nivel básico, pueda cumplir con la ley con costos razonables — distintos a los de una mediana en nivel intermedio o a los de una gran corporación en nivel avanzado, que sí asumirá la infraestructura de cumplimiento completa (DPO, certificaciones, auditorías).</p>
       `
     },
     '2': {
       ref: 'Art. 6 · Art. 9 · Art. 10 · Art. 11 · Art. 19',
-      title: 'Un marco <em>vivo</em> para la IA',
-      plain: 'Cómo la ley regula el entrenamiento de modelos, los datos inferidos por algoritmos y las decisiones automatizadas que afectan a las personas.',
+      title: 'Reglas <em>claras</em> para la IA',
+      plain: 'Cómo nuestro proyecto regula el entrenamiento de modelos, los datos inferidos por algoritmos y las decisiones automatizadas que afectan a las personas.',
       body: `
-        <p>Cuatro piezas interconectadas convierten al proyecto en un <strong>marco jurídico para la economía de la inteligencia artificial</strong>.</p>
-        <p><strong>1. Entrenamiento con datos públicos (Art. 6).</strong> Validado como interés legítimo cuando los datos son accesibles sin restricción técnica/legal, no incluyen sensibles, hay medidas de seguridad proporcionales y existe un mecanismo claro, gratuito y accesible de oposición.</p>
-        <p><strong>2. Datos inferidos (Art. 9).</strong> Categoría emergente expresamente codificada: perfiles, predicciones o conclusiones generadas a partir del análisis de datos preexistentes con capacidad de influir en decisiones sobre el titular.</p>
-        <p><strong>3. Machine unlearning (Art. 10).</strong> Si la supresión en modelos entrenados no es técnicamente viable, se documenta con declaración jurada y se aplica bloqueo inmediato + exclusión de nuevos ciclos + anonimización.</p>
-        <p><strong>4. Revisión humana razonable (Art. 19).</strong> Derecho a solicitar revisión de decisiones exclusivamente automatizadas con efectos jurídicos o impactos relevantes.</p>
+        <p>Cuatro piezas interconectadas permiten que el proyecto dialogue con la <strong>economía de la inteligencia artificial</strong>:</p>
+        <p><strong>1. Entrenamiento con datos públicos (Art. 6).</strong> Se valida como interés legítimo cuando los datos son accesibles sin restricción técnica o legal, no incluyen datos sensibles, se adoptan medidas de seguridad proporcionales y existe un mecanismo claro, gratuito y accesible de oposición.</p>
+        <p><strong>2. Datos inferidos (Art. 9).</strong> Reconocemos una categoría emergente: perfiles, predicciones o conclusiones generadas a partir del análisis de datos preexistentes con capacidad de influir en decisiones sobre el titular.</p>
+        <p><strong>3. Machine unlearning (Art. 10).</strong> Si la supresión en modelos ya entrenados no es técnicamente viable, se documenta con declaración jurada y se aplican medidas alternativas: bloqueo inmediato, exclusión en nuevos ciclos y anonimización cuando sea posible.</p>
+        <p><strong>4. Revisión humana razonable (Art. 19).</strong> Derecho a solicitar la revisión de decisiones exclusivamente automatizadas que produzcan efectos jurídicos o impactos relevantes.</p>
       `
     },
     '3': {
       ref: 'Art. 60 · Art. 61',
       title: 'Sandbox <em>regulatorio</em>',
-      plain: 'Un carril legal oficial para probar ideas nuevas (IA, modelos de negocio, mecanismos alternativos) sin incumplir la ley.',
+      plain: 'Un carril legal para probar ideas nuevas (IA, modelos de negocio, mecanismos alternativos) con reglas claras y sin incumplir la ley.',
       body: `
-        <p>Por primera vez en Argentina, un marco jurídico autoriza la implementación de <strong>entornos regulatorios de prueba</strong> para proyectos innovadores. La autoridad de aplicación (AAIP), mediante resolución fundada, puede autorizar proyectos basados en IA, nuevos modelos de negocio o mecanismos alternativos de cumplimiento.</p>
-        <p>Las autorizaciones tendrán <strong>carácter temporal</strong> y podrán prever condiciones diferenciadas o excepciones limitadas, siempre que no impliquen riesgo significativo para los derechos de los titulares.</p>
+        <p>Incorporamos al texto una figura poco explorada en Argentina: la posibilidad de que la autoridad de aplicación (AAIP) autorice, mediante resolución fundada, <strong>entornos regulatorios de prueba</strong> para proyectos innovadores basados en IA, nuevos modelos de negocio o mecanismos alternativos de cumplimiento.</p>
+        <p>Las autorizaciones tendrían <strong>carácter temporal</strong> y podrían prever condiciones diferenciadas o excepciones limitadas, siempre que no impliquen riesgo significativo para los derechos de los titulares.</p>
         <ul>
           <li>Modalidades: tecnologías de privacidad, incertidumbre regulatoria, sistemas avanzados de IA.</li>
           <li>Cierre: incorporación al régimen regular, anonimización o supresión.</li>
           <li>Reportes: la AAIP puede requerir información o reportes finales.</li>
         </ul>
-        <p>Es el <em>segundo modelo</em> en la comparación internacional: más exigente que el modelo pedagógico ICO UK, pero más flexible que el acotado español AI Act 57-59 o el PDPC Singapur Global AI Assurance Sandbox.</p>
+        <p>Miramos referencias como el modelo pedagógico de la ICO en Reino Unido, el AI Act español (arts. 57-59) y el Global AI Assurance Sandbox del PDPC de Singapur. Tratamos de encontrar un equilibrio adecuado a la escala y necesidades de Argentina.</p>
       `
     },
     '4': {
       ref: 'Art. 4 inc. k · Art. 21',
-      title: 'Pro-innovación <em>responsable</em>',
-      plain: 'Cuando hay dudas sobre cómo aplicar la ley, se favorece la interpretación que garantiza derechos sin frenar soluciones que ya funcionan.',
+      title: 'Innovación <em>con responsabilidad</em>',
+      plain: 'Cuando hay dudas sobre cómo aplicar la ley, favorecemos la interpretación que garantiza derechos sin frenar soluciones que ya funcionan.',
       body: `
-        <p>Principio hermenéutico novedoso: <strong>"las dudas de interpretación se resolverán en favor de soluciones que garanticen derechos sin desalentar prácticas tecnológicamente viables y socialmente beneficiosas"</strong>.</p>
-        <p>Funciona como <strong>criterio de interpretación pro-innovación</strong> en casos de ambigüedad normativa. Combina con el principio de <em>responsabilidad proactiva</em> (Art. 21) que privilegia el equilibrio entre protección efectiva y promoción de innovación responsable.</p>
-        <p>Encarna la apuesta identificable del proyecto: Argentina como jurisdicción competitiva para IA con proporcionalidad para PyMEs, sandbox operativo y flexibilidad superior a la del Reino Unido.</p>
-        <p>Aporta <strong>seguridad jurídica previsible</strong> para operadores que adopten tecnologías emergentes sin consenso regulatorio definido.</p>
+        <p>Proponemos un principio hermenéutico: <strong>"las dudas de interpretación se resolverán en favor de soluciones que garanticen derechos sin desalentar prácticas tecnológicamente viables y socialmente beneficiosas"</strong>.</p>
+        <p>Funciona como <strong>criterio de interpretación</strong> en casos de ambigüedad normativa. Se combina con el principio de <em>responsabilidad proactiva</em> (Art. 21), que busca el equilibrio entre protección efectiva y promoción de prácticas responsables.</p>
+        <p>No queremos que la ley se convierta en un obstáculo para soluciones que ya son parte del día a día de las personas. Tampoco queremos que los derechos se diluyan: la idea es que ambos objetivos convivan.</p>
+        <p>El efecto práctico que esperamos es <strong>mayor seguridad jurídica</strong> para quienes adopten tecnologías emergentes en contextos donde todavía no hay consenso regulatorio definido.</p>
       `
     }
   };
