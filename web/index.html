@@ -69,7 +69,7 @@
       <li><a href="#empresas" data-nav data-tab-link="empresas">Empresas</a></li>
       <li><a href="#sandbox" data-nav data-tab-link="sandbox">Sandbox</a></li>
       <li><a href="#comparador" data-nav data-tab-link="comparador">Comparador</a></li>
-      <li><a href="#mapamundi" data-nav data-tab-link="mapamundi" class="nav-link-new">MapaMundi <span class="nav-badge">BIS</span></a></li>
+      <li><a href="#mapamundi" data-nav data-tab-link="mapamundi" class="nav-link-new">IA en el mundo <span class="nav-badge">BIS</span></a></li>
     </ul>
     <div class="font-ctrl" role="group" aria-label="Tamaño de texto">
       <button type="button" data-fs="sm" aria-label="Texto pequeño"><span class="sm">A</span></button>
@@ -119,7 +119,7 @@
     <li><a href="#sandbox" data-drawer-link data-tab-link="sandbox"><span class="num">05</span>Sandbox</a></li>
     <li><a href="#beneficios" data-drawer-link data-tab-link="beneficios"><span class="num">06</span>Beneficios</a></li>
     <li><a href="#comparador" data-drawer-link data-tab-link="comparador"><span class="num">07</span>Comparador</a></li>
-    <li><a href="#mapamundi" data-drawer-link data-tab-link="mapamundi"><span class="num">08</span>MapaMundi · BIS 1343</a></li>
+    <li><a href="#mapamundi" data-drawer-link data-tab-link="mapamundi"><span class="num">08</span>IA en el mundo · BIS 1343</a></li>
     <li><a href="#cierre" data-drawer-link data-tab-link="cierre"><span class="num">09</span>Cierre</a></li>
   </ul>
   <div class="drawer-ctas">
@@ -153,7 +153,7 @@
       <span class="tab-num">07</span><span class="tab-label">Comparador</span>
     </button>
     <button class="tab tab-new" role="tab" data-tab-link="mapamundi" aria-selected="false" type="button">
-      <span class="tab-num">08</span><span class="tab-label">MapaMundi</span><span class="tab-badge">BIS 1343</span>
+      <span class="tab-num">08</span><span class="tab-label">IA en el mundo</span><span class="tab-badge">BIS 1343</span>
     </button>
     <button class="tab" role="tab" data-tab-link="cierre" aria-selected="false" type="button">
       <span class="tab-num">09</span><span class="tab-label">Cierre</span>
@@ -1140,47 +1140,138 @@
   </div>
 </section>
 
-<!-- MAPAMUNDI · BIS 1343 -->
-<section id="mapamundi" class="section section-mapamundi" data-section data-tab="mapamundi">
+<!-- IA EN EL MUNDO · BIS 1343 -->
+<section id="mapamundi" class="section section-bis" data-section data-tab="mapamundi">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">08 · Geografía de la IA · BIS Working Paper 1343</span>
-      <h2 class="section-title">Dónde están los <em>datos</em> del mundo</h2>
+      <span class="eyebrow">08 · BIS Working Paper 1343 · Rishabh &amp; Shreeti (2026)</span>
+      <h2 class="section-title">La IA no se distribuye <em>parejo</em> en el mundo</h2>
       <p class="section-lead">
-        Rishabh &amp; Shreeti (2026) analizaron <strong>76 jurisdicciones</strong> y mapearon dónde se concentran las empresas de IA con valuación ≥ USD 500M.
-        El resultado: un mundo <em>asimétrico</em> donde los datos de los argentinos terminan, casi inevitablemente, en infraestructura foránea.
-        Por eso <strong>modernizar la Ley 25.326 importa</strong>: el cruce entre esta evidencia y nuestro proyecto es directo.
+        El Banco de Pagos Internacionales publicó en 2026 un análisis de <strong>76 jurisdicciones</strong> mapeando dónde se concentran las empresas de IA con valuación ≥ USD 500M.
+        Los números son contundentes y ofrecen <em>evidencia empírica</em> para cada pilar del proyecto 1625-D-2026.
       </p>
     </div>
 
-    <div class="globe-wrap">
-      <div class="globe-canvas-wrap">
-        <div class="globe-canvas" id="globeCanvas" role="application" aria-label="Globo terráqueo interactivo con datos BIS 1343"></div>
-        <div class="globe-hint" aria-hidden="true">
-          <span>⟳ arrastrar · ⊙ clic para detalle</span>
-        </div>
+    <!-- 4 KPIs macro -->
+    <div class="bis-kpis">
+      <div class="bis-kpi" data-reveal>
+        <span class="bis-kpi-num">76</span>
+        <span class="bis-kpi-label">jurisdicciones analizadas</span>
       </div>
-      <aside class="globe-panel" id="globePanel" aria-live="polite">
-        <!-- content rendered by globe.js -->
-      </aside>
-    </div>
-
-    <div class="globe-columns">
-      <div class="globe-top">
-        <h3 class="globe-block-title">Top 15 por cantidad de firms IA</h3>
-        <ol class="globe-top-list" id="globeTopList" aria-label="Ranking de jurisdicciones"></ol>
-        <p class="globe-note">Fuente: Rishabh, K. y Shreeti, V. (2026), <em>"The Geography of AI Firms"</em>, BIS Working Papers N° 1343. Sample Pitchbook, valuación ≥ USD 500M.</p>
+      <div class="bis-kpi" data-reveal>
+        <span class="bis-kpi-num">USD 30B</span>
+        <span class="bis-kpi-label">valuación global AI firms (USD 500M+)</span>
       </div>
-      <div class="globe-insights-wrap">
-        <h3 class="globe-block-title">Coincidencias con el proyecto 1625-D-2026</h3>
-        <p class="globe-block-lead">Seis cruces directos entre la evidencia BIS y los artículos del proyecto. Cada uno explica <em>por qué</em> la reforma importa hoy.</p>
-        <div class="globe-insights" id="globeInsights"></div>
+      <div class="bis-kpi" data-reveal>
+        <span class="bis-kpi-num">95%</span>
+        <span class="bis-kpi-label">concentrado en 10 jurisdicciones</span>
+      </div>
+      <div class="bis-kpi" data-reveal>
+        <span class="bis-kpi-num arg">Argentina · 0</span>
+        <span class="bis-kpi-label">firms IA ≥ USD 500M · AIPI 0,47</span>
       </div>
     </div>
 
-    <div class="globe-cta">
-      <div class="globe-cta-title">Argentina en el mapa</div>
-      <p>0 firms de IA ≥ USD 500M. AIPI 0,47 (por debajo de Brasil, Chile, México). Con adecuación UE renovada en enero de 2024 y una autoridad independiente consolidada, el proyecto 1625-D-2026 apunta a <strong>cerrar esa brecha sin resignar derechos</strong>: proporcionalidad para PyMEs, reglas claras para IA y sandbox regulatorio.</p>
+    <!-- Ranking -->
+    <div class="bis-ranking" data-reveal>
+      <div class="bis-ranking-head">
+        <h3 class="bis-block-title">Dónde están las firms de IA</h3>
+        <span class="bis-ranking-legend">Top 15 · barra escalada por raíz cuadrada del nº de firms</span>
+      </div>
+      <ol class="bis-rank-list" aria-label="Ranking de jurisdicciones por firms IA">
+        <li class="bis-rank t-gold"><span class="r">01</span><span class="f">🇺🇸</span><span class="c">Estados Unidos</span><span class="bar"><span class="fill" style="--w:100%"></span></span><span class="v">696</span></li>
+        <li class="bis-rank t-gold"><span class="r">02</span><span class="f">🇨🇳</span><span class="c">China</span><span class="bar"><span class="fill" style="--w:59.2%"></span></span><span class="v">244</span></li>
+        <li class="bis-rank t-orange"><span class="r">03</span><span class="f">🇪🇺</span><span class="c">Zona Euro</span><span class="bar"><span class="fill" style="--w:29.1%"></span></span><span class="v">59</span></li>
+        <li class="bis-rank t-orange"><span class="r">04</span><span class="f">🇮🇱</span><span class="c">Israel</span><span class="bar"><span class="fill" style="--w:24.6%"></span></span><span class="v">42</span></li>
+        <li class="bis-rank t-orange"><span class="r">05</span><span class="f">🇬🇧</span><span class="c">Reino Unido</span><span class="bar"><span class="fill" style="--w:23.9%"></span></span><span class="v">40</span></li>
+        <li class="bis-rank t-blue"><span class="r">06</span><span class="f">🇯🇵</span><span class="c">Japón</span><span class="bar"><span class="fill" style="--w:19.3%"></span></span><span class="v">26</span></li>
+        <li class="bis-rank t-blue"><span class="r">07</span><span class="f">🇨🇦</span><span class="c">Canadá</span><span class="bar"><span class="fill" style="--w:17.8%"></span></span><span class="v">22</span></li>
+        <li class="bis-rank t-blue"><span class="r">08</span><span class="f">🇮🇳</span><span class="c">India</span><span class="bar"><span class="fill" style="--w:17.8%"></span></span><span class="v">22</span></li>
+        <li class="bis-rank t-blue"><span class="r">09</span><span class="f">🇹🇼</span><span class="c">Chinese Taipei</span><span class="bar"><span class="fill" style="--w:16.9%"></span></span><span class="v">20</span></li>
+        <li class="bis-rank t-blue"><span class="r">10</span><span class="f">🇰🇷</span><span class="c">Corea del Sur</span><span class="bar"><span class="fill" style="--w:14.7%"></span></span><span class="v">15</span></li>
+        <li class="bis-rank t-blue"><span class="r">11</span><span class="f">🇦🇺</span><span class="c">Australia</span><span class="bar"><span class="fill" style="--w:14.2%"></span></span><span class="v">14</span></li>
+        <li class="bis-rank t-blue"><span class="r">12</span><span class="f">🇸🇬</span><span class="c">Singapur</span><span class="bar"><span class="fill" style="--w:12.6%"></span></span><span class="v">11</span></li>
+        <li class="bis-rank t-blue"><span class="r">13</span><span class="f">🇨🇭</span><span class="c">Suiza</span><span class="bar"><span class="fill" style="--w:10.7%"></span></span><span class="v">8</span></li>
+        <li class="bis-rank t-blue"><span class="r">14</span><span class="f">🇸🇪</span><span class="c">Suecia</span><span class="bar"><span class="fill" style="--w:10%"></span></span><span class="v">7</span></li>
+        <li class="bis-rank t-blue"><span class="r">15</span><span class="f">🇧🇷</span><span class="c">Brasil</span><span class="bar"><span class="fill" style="--w:6.6%"></span></span><span class="v">3</span></li>
+        <li class="bis-rank t-arg"><span class="r">—</span><span class="f">🇦🇷</span><span class="c">Argentina</span><span class="bar"><span class="fill empty" style="--w:0%"></span></span><span class="v">0</span></li>
+      </ol>
+      <p class="bis-note">Fuente: Rishabh, K. y Shreeti, V. (2026), <em>"The Geography of AI Firms"</em>, BIS Working Papers N° 1343. Muestra Pitchbook, firms con valuación ≥ USD 500M y jurisdicciones con PBI nominal ≥ USD 50B.</p>
+    </div>
+
+    <!-- Cruces con la ley -->
+    <div class="bis-crosses" data-reveal>
+      <div class="bis-block-head">
+        <h3 class="bis-block-title">Seis cruces con el proyecto 1625-D-2026</h3>
+        <p class="bis-block-lead">Cada estadística del paper se traduce en un artículo concreto de la reforma. No es casualidad: el proyecto se construyó <em>leyendo esta evidencia</em>.</p>
+      </div>
+
+      <div class="bis-insights">
+        <article class="bis-insight">
+          <div class="bis-insight-icon" aria-hidden="true">🌐</div>
+          <div class="bis-insight-body">
+            <div class="bis-insight-stat">95% del valor AI en 10 jurisdicciones</div>
+            <h4>Transferencias internacionales · Cap. III</h4>
+            <p>Los datos de los argentinos inevitablemente cruzan fronteras hacia donde se concentra el procesamiento. La ley actualiza el régimen de transferencias con garantías adecuadas, cláusulas tipo y decisiones de adecuación.</p>
+          </div>
+        </article>
+
+        <article class="bis-insight">
+          <div class="bis-insight-icon" aria-hidden="true">🤖</div>
+          <div class="bis-insight-body">
+            <div class="bis-insight-stat">64% de los deals son home-biased</div>
+            <h4>Decisiones automatizadas · Art. 19</h4>
+            <p>Los modelos de IA se entrenan con datos locales de la jurisdicción donde vive la firma. Un argentino evaluado por un sistema automatizado enfrenta decisiones construidas con sesgos ajenos. El proyecto garantiza revisión humana y explicabilidad.</p>
+          </div>
+        </article>
+
+        <article class="bis-insight">
+          <div class="bis-insight-icon" aria-hidden="true">🇪🇺</div>
+          <div class="bis-insight-body">
+            <div class="bis-insight-stat">Adecuación UE · renovada 15·01·2024</div>
+            <h4>Articulación GDPR · Tít. XII</h4>
+            <p>Argentina es uno de los pocos países fuera de la UE con nivel adecuado. La ley blinda ese estatus: sin él, se perderían USD 9.685M de exportaciones de conocimiento 2024-25. El proyecto no rompe el puente: lo refuerza.</p>
+          </div>
+        </article>
+
+        <article class="bis-insight">
+          <div class="bis-insight-icon" aria-hidden="true">⚖️</div>
+          <div class="bis-insight-body">
+            <div class="bis-insight-stat">AIPI · Regulation &amp; Ethics</div>
+            <h4>Autoridad independiente · AAIP preservada</h4>
+            <p>El índice IMF AI Preparedness muestra que los países con mayor score regulatorio atraen firms: Singapur 0,80 · EEUU 0,77 · Suiza 0,76. La ley preserva la autonomía de la AAIP — elemento central para escalar sin improvisar.</p>
+          </div>
+        </article>
+
+        <article class="bis-insight">
+          <div class="bis-insight-icon" aria-hidden="true">🧪</div>
+          <div class="bis-insight-body">
+            <div class="bis-insight-stat">UK · Singapur · Corea · modelos citados</div>
+            <h4>Sandbox regulatorio · Art. 52</h4>
+            <p>Las tres jurisdicciones de referencia del proyecto tienen sandbox vigente y AIPI &gt; 0,72. Argentina está en 0,47: el sandbox es el puente entre protección e innovación que venimos necesitando.</p>
+          </div>
+        </article>
+
+        <article class="bis-insight">
+          <div class="bis-insight-icon" aria-hidden="true">📊</div>
+          <div class="bis-insight-body">
+            <div class="bis-insight-stat">Israel · 42 firms, 19,7% de su PBI</div>
+            <h4>PyMEs e innovación · Categorización tripartita</h4>
+            <p>Israel demuestra que un ecosistema PyME robusto puede escalar si las reglas son proporcionales. La ley propone tres niveles (básico · intermedio · avanzado) para no ahogar a las PyMEs argentinas mientras exige lo que hace falta.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Argentina focus -->
+    <div class="bis-arg" data-reveal>
+      <div class="bis-arg-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="bis-arg-body">
+        <div class="bis-arg-eyebrow">Argentina en contexto</div>
+        <h3 class="bis-arg-title">0 firms. AIPI 0,47. <em>Y sin embargo, adecuada UE.</em></h3>
+        <p>Estamos por debajo de Brasil, Chile y México en preparación para IA. No tenemos una sola firm de IA con valuación ≥ USD 500M. Pero mantenemos desde 2003, renovado en enero de 2024, el estatus de <strong>nivel adecuado</strong> ante la Unión Europea — algo que muy pocos países tienen.</p>
+        <p>El proyecto 1625-D-2026 no renuncia a ese estatus: lo usa como plataforma. <strong>Proporcionalidad para PyMEs, reglas claras para IA y un sandbox regulatorio</strong> son las tres palancas que propone para cerrar la brecha con los líderes — sin resignar derechos y sin romper el puente europeo.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1283,14 +1374,6 @@
 
 </main>
 
-<!-- STICKY MOBILE CTA -->
-<div class="mobile-cta" id="mobileCta" aria-hidden="true">
-  <a href="#contexto">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Explorar la reforma
-  </a>
-</div>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-inner">
@@ -1329,6 +1412,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script src="globe.js" defer></script>
 </body>
 </html>
