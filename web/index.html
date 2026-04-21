@@ -63,13 +63,13 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#contexto" data-nav>Contexto</a></li>
-      <li><a href="#pilares" data-nav>Pilares</a></li>
-      <li><a href="#derechos" data-nav>Derechos</a></li>
-      <li><a href="#empresas" data-nav>Empresas</a></li>
-      <li><a href="#sandbox" data-nav>Sandbox</a></li>
-      <li><a href="#beneficios" data-nav>Beneficios</a></li>
-      <li><a href="#comparador" data-nav>Comparador</a></li>
+      <li><a href="#contexto" data-nav data-tab-link="contexto">Contexto</a></li>
+      <li><a href="#pilares" data-nav data-tab-link="pilares">Pilares</a></li>
+      <li><a href="#derechos" data-nav data-tab-link="derechos">Derechos</a></li>
+      <li><a href="#empresas" data-nav data-tab-link="empresas">Empresas</a></li>
+      <li><a href="#sandbox" data-nav data-tab-link="sandbox">Sandbox</a></li>
+      <li><a href="#comparador" data-nav data-tab-link="comparador">Comparador</a></li>
+      <li><a href="#mapamundi" data-nav data-tab-link="mapamundi" class="nav-link-new">MapaMundi <span class="nav-badge">BIS</span></a></li>
     </ul>
     <div class="font-ctrl" role="group" aria-label="Tamaño de texto">
       <button type="button" data-fs="sm" aria-label="Texto pequeño"><span class="sm">A</span></button>
@@ -112,14 +112,15 @@
     <button type="button" data-fs="lg">A+</button>
   </div>
   <ul class="drawer-links">
-    <li><a href="#contexto" data-drawer-link><span class="num">01</span>Contexto</a></li>
-    <li><a href="#pilares" data-drawer-link><span class="num">02</span>Pilares</a></li>
-    <li><a href="#derechos" data-drawer-link><span class="num">03</span>Derechos</a></li>
-    <li><a href="#empresas" data-drawer-link><span class="num">04</span>Empresas</a></li>
-    <li><a href="#sandbox" data-drawer-link><span class="num">05</span>Sandbox</a></li>
-    <li><a href="#beneficios" data-drawer-link><span class="num">06</span>Beneficios</a></li>
-    <li><a href="#comparador" data-drawer-link><span class="num">07</span>Comparador</a></li>
-    <li><a href="#cierre" data-drawer-link><span class="num">12</span>Cierre</a></li>
+    <li><a href="#contexto" data-drawer-link data-tab-link="contexto"><span class="num">01</span>Contexto</a></li>
+    <li><a href="#pilares" data-drawer-link data-tab-link="pilares"><span class="num">02</span>Pilares</a></li>
+    <li><a href="#derechos" data-drawer-link data-tab-link="derechos"><span class="num">03</span>Derechos</a></li>
+    <li><a href="#empresas" data-drawer-link data-tab-link="empresas"><span class="num">04</span>Empresas</a></li>
+    <li><a href="#sandbox" data-drawer-link data-tab-link="sandbox"><span class="num">05</span>Sandbox</a></li>
+    <li><a href="#beneficios" data-drawer-link data-tab-link="beneficios"><span class="num">06</span>Beneficios</a></li>
+    <li><a href="#comparador" data-drawer-link data-tab-link="comparador"><span class="num">07</span>Comparador</a></li>
+    <li><a href="#mapamundi" data-drawer-link data-tab-link="mapamundi"><span class="num">08</span>MapaMundi · BIS 1343</a></li>
+    <li><a href="#cierre" data-drawer-link data-tab-link="cierre"><span class="num">09</span>Cierre</a></li>
   </ul>
   <div class="drawer-ctas">
     <a href="https://www.hcdn.gob.ar/" target="_blank" rel="noopener" class="drawer-cta">Ir al sitio de la HCDN →</a>
@@ -127,17 +128,38 @@
   </div>
 </aside>
 
-<!-- TOC RAIL -->
-<nav class="toc" id="toc" aria-label="Índice de secciones">
-  <button class="toc-dot" data-toc="contexto" type="button" aria-label="Contexto"><span class="toc-label">Contexto</span></button>
-  <button class="toc-dot" data-toc="pilares" type="button" aria-label="Pilares"><span class="toc-label">Pilares</span></button>
-  <button class="toc-dot" data-toc="derechos" type="button" aria-label="Derechos"><span class="toc-label">Derechos</span></button>
-  <button class="toc-dot" data-toc="empresas" type="button" aria-label="Empresas"><span class="toc-label">Empresas</span></button>
-  <button class="toc-dot" data-toc="sandbox" type="button" aria-label="Sandbox"><span class="toc-label">Sandbox</span></button>
-  <button class="toc-dot" data-toc="beneficios" type="button" aria-label="Beneficios"><span class="toc-label">Beneficios</span></button>
-  <button class="toc-dot" data-toc="comparador" type="button" aria-label="Comparador"><span class="toc-label">Comparador</span></button>
-  <button class="toc-dot" data-toc="cierre" type="button" aria-label="Cierre"><span class="toc-label">Cierre</span></button>
-</nav>
+<!-- TABS BAR (sticky) -->
+<div class="tabs-bar" id="tabsBar" role="tablist" aria-label="Secciones del proyecto">
+  <div class="tabs-inner">
+    <button class="tab" role="tab" data-tab-link="contexto" aria-selected="true" type="button">
+      <span class="tab-num">01</span><span class="tab-label">Contexto</span>
+    </button>
+    <button class="tab" role="tab" data-tab-link="pilares" aria-selected="false" type="button">
+      <span class="tab-num">02</span><span class="tab-label">Pilares</span>
+    </button>
+    <button class="tab" role="tab" data-tab-link="derechos" aria-selected="false" type="button">
+      <span class="tab-num">03</span><span class="tab-label">Derechos</span>
+    </button>
+    <button class="tab" role="tab" data-tab-link="empresas" aria-selected="false" type="button">
+      <span class="tab-num">04</span><span class="tab-label">Empresas</span>
+    </button>
+    <button class="tab" role="tab" data-tab-link="sandbox" aria-selected="false" type="button">
+      <span class="tab-num">05</span><span class="tab-label">Sandbox</span>
+    </button>
+    <button class="tab" role="tab" data-tab-link="beneficios" aria-selected="false" type="button">
+      <span class="tab-num">06</span><span class="tab-label">Beneficios</span>
+    </button>
+    <button class="tab" role="tab" data-tab-link="comparador" aria-selected="false" type="button">
+      <span class="tab-num">07</span><span class="tab-label">Comparador</span>
+    </button>
+    <button class="tab tab-new" role="tab" data-tab-link="mapamundi" aria-selected="false" type="button">
+      <span class="tab-num">08</span><span class="tab-label">MapaMundi</span><span class="tab-badge">BIS 1343</span>
+    </button>
+    <button class="tab" role="tab" data-tab-link="cierre" aria-selected="false" type="button">
+      <span class="tab-num">09</span><span class="tab-label">Cierre</span>
+    </button>
+  </div>
+</div>
 
 <!-- PILLAR DETAIL MODAL / BOTTOM SHEET -->
 <div class="pillar-detail" id="pillarDetail" aria-hidden="true">
@@ -269,7 +291,7 @@
 </section>
 
 <!-- CONTEXTO -->
-<section id="contexto" class="section section-context" data-section>
+<section id="contexto" class="section section-context" data-section data-tab="contexto">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">01 · Contexto histórico</span>
@@ -354,7 +376,7 @@
 </section>
 
 <!-- PILARES -->
-<section id="pilares" class="section section-pillars" data-section>
+<section id="pilares" class="section section-pillars" data-section data-tab="pilares">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">02 · Ejes del proyecto</span>
@@ -411,7 +433,7 @@
 </section>
 
 <!-- DERECHOS -->
-<section id="derechos" class="section section-rights" data-section>
+<section id="derechos" class="section section-rights" data-section data-tab="derechos">
   <div class="container">
     <div class="section-head centered">
       <span class="eyebrow">03 · Título IV — Derechos del titular</span>
@@ -531,7 +553,7 @@
 </section>
 
 <!-- EMPRESAS -->
-<section id="empresas" class="section section-tiers" data-section>
+<section id="empresas" class="section section-tiers" data-section data-tab="empresas">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">04 · Título V — Obligaciones del responsable</span>
@@ -641,7 +663,7 @@
 </section>
 
 <!-- SANDBOX -->
-<section id="sandbox" class="section section-sandbox" data-section>
+<section id="sandbox" class="section section-sandbox" data-section data-tab="sandbox">
   <div class="sandbox-bg" aria-hidden="true"></div>
   <div class="container">
     <div class="section-head light">
@@ -696,7 +718,7 @@
 </section>
 
 <!-- BENEFICIOS -->
-<section id="beneficios" class="section section-benefits" data-section>
+<section id="beneficios" class="section section-benefits" data-section data-tab="beneficios">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">06 · Impacto</span>
@@ -773,7 +795,7 @@
 </section>
 
 <!-- COMPARADOR -->
-<section id="comparador" class="section section-compare" data-section>
+<section id="comparador" class="section section-compare" data-section data-tab="comparador">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">07 · Antes / Después</span>
@@ -881,7 +903,7 @@
 </section>
 
 <!-- INTERNACIONAL -->
-<section class="section section-international" data-section>
+<section class="section section-international" data-section data-tab="contexto">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">08 · Referencias internacionales</span>
@@ -949,7 +971,7 @@
 </section>
 
 <!-- IA -->
-<section class="section section-ai" data-section>
+<section class="section section-ai" data-section data-tab="pilares">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">09 · Tecnología en la norma</span>
@@ -1006,7 +1028,7 @@
 </section>
 
 <!-- SECTORIAL -->
-<section class="section section-sectors" data-section>
+<section class="section section-sectors" data-section data-tab="empresas">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">10 · Impacto sectorial</span>
@@ -1118,8 +1140,53 @@
   </div>
 </section>
 
+<!-- MAPAMUNDI · BIS 1343 -->
+<section id="mapamundi" class="section section-mapamundi" data-section data-tab="mapamundi">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">08 · Geografía de la IA · BIS Working Paper 1343</span>
+      <h2 class="section-title">Dónde están los <em>datos</em> del mundo</h2>
+      <p class="section-lead">
+        Rishabh &amp; Shreeti (2026) analizaron <strong>76 jurisdicciones</strong> y mapearon dónde se concentran las empresas de IA con valuación ≥ USD 500M.
+        El resultado: un mundo <em>asimétrico</em> donde los datos de los argentinos terminan, casi inevitablemente, en infraestructura foránea.
+        Por eso <strong>modernizar la Ley 25.326 importa</strong>: el cruce entre esta evidencia y nuestro proyecto es directo.
+      </p>
+    </div>
+
+    <div class="globe-wrap">
+      <div class="globe-canvas-wrap">
+        <div class="globe-canvas" id="globeCanvas" role="application" aria-label="Globo terráqueo interactivo con datos BIS 1343"></div>
+        <div class="globe-hint" aria-hidden="true">
+          <span>⟳ arrastrar · ⊙ clic para detalle</span>
+        </div>
+      </div>
+      <aside class="globe-panel" id="globePanel" aria-live="polite">
+        <!-- content rendered by globe.js -->
+      </aside>
+    </div>
+
+    <div class="globe-columns">
+      <div class="globe-top">
+        <h3 class="globe-block-title">Top 15 por cantidad de firms IA</h3>
+        <ol class="globe-top-list" id="globeTopList" aria-label="Ranking de jurisdicciones"></ol>
+        <p class="globe-note">Fuente: Rishabh, K. y Shreeti, V. (2026), <em>"The Geography of AI Firms"</em>, BIS Working Papers N° 1343. Sample Pitchbook, valuación ≥ USD 500M.</p>
+      </div>
+      <div class="globe-insights-wrap">
+        <h3 class="globe-block-title">Coincidencias con el proyecto 1625-D-2026</h3>
+        <p class="globe-block-lead">Seis cruces directos entre la evidencia BIS y los artículos del proyecto. Cada uno explica <em>por qué</em> la reforma importa hoy.</p>
+        <div class="globe-insights" id="globeInsights"></div>
+      </div>
+    </div>
+
+    <div class="globe-cta">
+      <div class="globe-cta-title">Argentina en el mapa</div>
+      <p>0 firms de IA ≥ USD 500M. AIPI 0,47 (por debajo de Brasil, Chile, México). Con adecuación UE renovada en enero de 2024 y una autoridad independiente consolidada, el proyecto 1625-D-2026 apunta a <strong>cerrar esa brecha sin resignar derechos</strong>: proporcionalidad para PyMEs, reglas claras para IA y sandbox regulatorio.</p>
+    </div>
+  </div>
+</section>
+
 <!-- IMPLEMENTACION -->
-<section class="section section-timeline" data-section>
+<section class="section section-timeline" data-section data-tab="cierre">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">11 · Art. 64 — Vigencia escalonada</span>
@@ -1161,7 +1228,7 @@
 </section>
 
 <!-- CIERRE -->
-<section id="cierre" class="section section-close" data-section>
+<section id="cierre" class="section section-close" data-section data-tab="cierre">
   <div class="close-grad" aria-hidden="true"></div>
   <div class="container close-inner">
     <div class="section-head centered light">
@@ -1262,5 +1329,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="globe.js" defer></script>
 </body>
 </html>

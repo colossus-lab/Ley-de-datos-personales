@@ -5,6 +5,73 @@
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
 
+/* ---------- TABS CONTROLLER ---------- */
+const TabsController = (function(){
+  const VALID = ['contexto','pilares','derechos','empresas','sandbox','beneficios','comparador','mapamundi','cierre'];
+  let current = null;
+
+  function getHashTab() {
+    const h = location.hash.replace('#','');
+    return VALID.includes(h) ? h : null;
+  }
+
+  function setTab(id, opts = {}) {
+    if (!VALID.includes(id)) id = 'contexto';
+    if (id === current && !opts.force) return;
+    current = id;
+    document.body.dataset.activeTab = id;
+    document.body.dataset.tabsOn = '1';
+    document.querySelectorAll('[data-tab-link]').forEach(el => {
+      const is = el.dataset.tabLink === id;
+      if (el.getAttribute('role') === 'tab') el.setAttribute('aria-selected', is ? 'true' : 'false');
+      el.classList.toggle('active', is);
+    });
+    if (opts.updateHash !== false) {
+      const newHash = '#' + id;
+      if (location.hash !== newHash) history.replaceState(null, '', newHash);
+    }
+    if (opts.scroll !== false) {
+      // Scroll to tabs-bar top (not entire page top, so hero stays context)
+      const tabsBar = document.getElementById('tabsBar');
+      if (tabsBar) {
+        const y = tabsBar.getBoundingClientRect().top + window.scrollY - 60;
+        window.scrollTo({ top: Math.max(0, y), behavior: REDUCED_MOTION ? 'auto' : 'smooth' });
+      }
+    }
+    // Notify listeners (ej: globo lazy-init)
+    document.dispatchEvent(new CustomEvent('tab:activated', { detail: { tab: id } }));
+  }
+
+  function init() {
+    const initial = getHashTab() || 'contexto';
+    setTab(initial, { scroll: false, updateHash: false, force: true });
+
+    // Tab bar buttons + nav links + drawer links
+    document.querySelectorAll('[data-tab-link]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        const id = el.dataset.tabLink;
+        if (!id) return;
+        e.preventDefault();
+        setTab(id);
+      });
+    });
+
+    window.addEventListener('hashchange', () => {
+      const id = getHashTab();
+      if (id) setTab(id, { updateHash: false });
+    });
+  }
+
+  return { init, setTab, get current() { return current; } };
+})();
+
+// Kickoff antes del resto para evitar flicker
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => TabsController.init());
+} else {
+  TabsController.init();
+}
+
 /* ---------- BODY SCROLL LOCK (composable, scrollbar-preserving) ---------- */
 const ScrollLock = (function(){
   let locks = 0;
