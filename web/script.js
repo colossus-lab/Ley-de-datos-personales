@@ -759,6 +759,90 @@ const ScrollLock = (function(){
   });
 })();
 
+/* ---------- SHARE BUTTONS ---------- */
+(function share() {
+  const buttons = document.querySelectorAll('.share-btn');
+  const toast = document.getElementById('shareToast');
+  if (!buttons.length) return;
+
+  const title = 'Proyecto 1625-D-2026 · Modernizar la protección de datos personales';
+  const text = 'Propuesta del diputado Martín Yeza para modernizar la Ley 25.326: proporcionalidad para PyMEs, reglas claras para IA y un sandbox regulatorio. Conocé la propuesta:';
+  const getUrl = () => location.origin + location.pathname;
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => toast.classList.remove('show'), 3500);
+  }
+
+  async function copyToClipboard(str) {
+    try {
+      await navigator.clipboard.writeText(str);
+      return true;
+    } catch (e) {
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = str;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch (_) {}
+      document.body.removeChild(ta);
+      return ok;
+    }
+  }
+
+  function markCopied(btn) {
+    btn.classList.add('copied');
+    setTimeout(() => btn.classList.remove('copied'), 1600);
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const kind = btn.dataset.share;
+      const url = getUrl();
+      const shareText = `${text} ${url}`;
+
+      if (kind === 'whatsapp') {
+        const wa = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+        window.open(wa, '_blank', 'noopener');
+      } else if (kind === 'twitter') {
+        const tw = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+        window.open(tw, '_blank', 'noopener');
+      } else if (kind === 'instagram') {
+        // Instagram no permite compartir URL desde web. Intentamos Web Share API (móvil); fallback a copia.
+        if (navigator.share) {
+          try {
+            await navigator.share({ title, text, url });
+            return;
+          } catch (e) {
+            // usuario canceló o error — caemos a copia
+          }
+        }
+        const ok = await copyToClipboard(shareText);
+        if (ok) {
+          markCopied(btn);
+          showToast('Enlace copiado — pegalo en tu historia o bio de Instagram');
+        } else {
+          showToast('No se pudo copiar automáticamente');
+        }
+      } else if (kind === 'copy') {
+        const ok = await copyToClipboard(url);
+        if (ok) {
+          markCopied(btn);
+          showToast('Enlace copiado al portapapeles');
+        } else {
+          showToast('No se pudo copiar');
+        }
+      }
+    });
+  });
+})();
+
 /* ---------- READING TIME per section ---------- */
 (function readingTime() {
   const sections = document.querySelectorAll('section[id]');
