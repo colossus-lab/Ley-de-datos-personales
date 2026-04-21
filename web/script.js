@@ -314,7 +314,12 @@ const ScrollLock = (function(){
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     ScrollLock.lock();
-    setTimeout(() => close.focus(), 50);
+    // Reset inline transforms + scroll so content starts fresh
+    const wrap = modal.querySelector('.pillar-detail-wrap');
+    const inner = modal.querySelector('.pillar-detail-inner');
+    if (wrap) { wrap.style.transform = ''; wrap.style.transition = ''; }
+    if (inner) inner.scrollTop = 0;
+    setTimeout(() => close.focus({ preventScroll: true }), 50);
 
     trapHandler = (e) => {
       if (e.key !== 'Tab') return;
@@ -337,9 +342,12 @@ const ScrollLock = (function(){
     if (!modal.classList.contains('open')) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
+    // Clear any inline transform from swipe-to-close
+    const wrap = modal.querySelector('.pillar-detail-wrap');
+    if (wrap) { wrap.style.transform = ''; wrap.style.transition = ''; }
     ScrollLock.unlock();
     if (trapHandler) modal.removeEventListener('keydown', trapHandler);
-    if (lastFocused && lastFocused.focus) lastFocused.focus();
+    if (lastFocused && lastFocused.focus) lastFocused.focus({ preventScroll: true });
   }
 
   pillars.forEach(p => {
@@ -359,6 +367,39 @@ const ScrollLock = (function(){
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });
+
+  // Swipe-down to close (mobile bottom sheet)
+  const wrap = modal.querySelector('.pillar-detail-wrap');
+  const inner = modal.querySelector('.pillar-detail-inner');
+  if (wrap && inner) {
+    let startY = 0, currentY = 0, dragging = false;
+    inner.addEventListener('touchstart', (e) => {
+      if (inner.scrollTop > 0) return;
+      startY = e.touches[0].clientY;
+      currentY = startY;
+      dragging = true;
+    }, { passive: true });
+    inner.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      currentY = e.touches[0].clientY;
+      const delta = currentY - startY;
+      if (delta > 0 && inner.scrollTop === 0) {
+        wrap.style.transform = `translateY(${Math.min(delta, 400)}px)`;
+        wrap.style.transition = 'none';
+      }
+    }, { passive: true });
+    inner.addEventListener('touchend', () => {
+      if (!dragging) return;
+      dragging = false;
+      const delta = currentY - startY;
+      wrap.style.transition = '';
+      if (delta > 120) {
+        closeModal();
+      } else {
+        wrap.style.transform = '';
+      }
+    });
+  }
 })();
 
 /* ---------- RIGHTS FLIP ---------- */

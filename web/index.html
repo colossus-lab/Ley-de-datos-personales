@@ -139,6 +139,19 @@
   <button class="toc-dot" data-toc="cierre" type="button" aria-label="Cierre"><span class="toc-label">Cierre</span></button>
 </nav>
 
+<!-- PILLAR DETAIL MODAL / BOTTOM SHEET -->
+<div class="pillar-detail" id="pillarDetail" aria-hidden="true">
+  <div class="pillar-detail-wrap">
+    <button class="close-detail" id="closeDetail" aria-label="Cerrar" type="button">×</button>
+    <div class="pillar-detail-inner">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="detail-body" id="detailBody">
+        <!-- dynamically filled -->
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- COMMAND PALETTE -->
 <div class="palette" id="palette" role="dialog" aria-modal="true" aria-labelledby="paletteLabel" aria-hidden="true">
   <div class="palette-box">
@@ -394,15 +407,6 @@
       </button>
     </div>
 
-    <!-- PILLAR DETAILS -->
-    <div class="pillar-detail" id="pillarDetail">
-      <div class="pillar-detail-inner">
-        <button class="close-detail" id="closeDetail" aria-label="Cerrar">×</button>
-        <div class="detail-body" id="detailBody">
-          <!-- dynamically filled -->
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1207,12 +1211,6 @@
       <div class="share-toast" id="shareToast" role="status" aria-live="polite"></div>
     </div>
 
-    <div class="close-cta" data-reveal>
-      <a href="#top" class="btn primary gold">
-        <span>Volver al inicio</span>
-        <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
   </div>
 </section>
 
