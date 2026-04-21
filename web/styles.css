@@ -1293,6 +1293,17 @@ img, svg { max-width: 100%; display: block; }
   position: relative;
 }
 .benefit:hover { background: var(--cream); transform: translateY(-4px); }
+.benefit.featured {
+  background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 100%);
+  color: var(--ivory);
+}
+.benefit.featured:hover { background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%); }
+.benefit.featured .benefit-num { color: var(--gold-bright); }
+.benefit.featured .benefit-num svg { color: var(--gold); }
+.benefit.featured .benefit-num small { color: var(--celeste-soft); }
+.benefit.featured h4 { color: var(--ivory); }
+.benefit.featured p { color: rgba(248,245,238,.85); }
+.benefit.featured p strong { color: var(--gold-bright); }
 
 .benefit-num {
   font-family: var(--serif);
