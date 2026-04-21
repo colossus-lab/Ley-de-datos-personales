@@ -5,6 +5,35 @@
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
 
+/* ---------- BODY SCROLL LOCK (composable, scrollbar-preserving) ---------- */
+const ScrollLock = (function(){
+  let locks = 0;
+  let savedPaddingRight = '';
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+  function lock() {
+    if (locks === 0) {
+      const sbw = getScrollbarWidth();
+      savedPaddingRight = document.body.style.paddingRight;
+      if (sbw > 0) document.body.style.paddingRight = sbw + 'px';
+      document.documentElement.style.overflow = 'hidden';
+      document.body.classList.add('no-scroll');
+    }
+    locks++;
+  }
+  function unlock() {
+    locks = Math.max(0, locks - 1);
+    if (locks === 0) {
+      document.documentElement.style.overflow = '';
+      document.body.style.paddingRight = savedPaddingRight;
+      document.body.classList.remove('no-scroll');
+    }
+  }
+  function reset() { locks = 0; unlock(); }
+  return { lock, unlock, reset };
+})();
+
 /* ---------- PROGRESS + NAV ---------- */
 (function progress() {
   const bar = document.getElementById('scrollProgress');
@@ -284,7 +313,7 @@ const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').mat
     lastFocused = sourceEl || document.activeElement;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
+    ScrollLock.lock();
     setTimeout(() => close.focus(), 50);
 
     trapHandler = (e) => {
@@ -308,7 +337,7 @@ const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').mat
     if (!modal.classList.contains('open')) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
+    ScrollLock.unlock();
     if (trapHandler) modal.removeEventListener('keydown', trapHandler);
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
@@ -454,7 +483,7 @@ const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').mat
     overlay.classList.add('open');
     toggle.setAttribute('aria-expanded', 'true');
     drawer.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
+    ScrollLock.lock();
     setTimeout(() => closeBtn && closeBtn.focus(), 50);
   }
   function close() {
@@ -462,7 +491,7 @@ const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').mat
     overlay.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
     drawer.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
+    ScrollLock.unlock();
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
 
@@ -633,7 +662,7 @@ const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').mat
   function open() {
     palette.classList.add('open');
     palette.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
+    ScrollLock.lock();
     input.value = '';
     filter('');
     setTimeout(() => input.focus(), 50);
@@ -641,7 +670,7 @@ const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').mat
   function close() {
     palette.classList.remove('open');
     palette.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
+    ScrollLock.unlock();
   }
   function go(r) {
     close();
