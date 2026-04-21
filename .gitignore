@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Node / Vercel local
+node_modules/
+.vercel/
+.env
+.env.local
+
+# Claude harness local
+.claude/launch.json
+.claude/settings.local.json
+
+# PDF rendering byproducts (regenerables)
+analisis_p*.png
+analisis.txt
