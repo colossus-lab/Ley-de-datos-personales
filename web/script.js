@@ -5,35 +5,6 @@
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const FINE_POINTER = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
 
-/* ---------- CUSTOM CURSOR ---------- */
-(function cursor() {
-  if (!FINE_POINTER) return;
-  const c = document.getElementById('cursor');
-  const t = document.getElementById('cursorTrail');
-  if (!c) return;
-  let mx = 0, my = 0, tx = 0, ty = 0;
-
-  window.addEventListener('mousemove', (e) => {
-    mx = e.clientX; my = e.clientY;
-    c.style.left = mx + 'px';
-    c.style.top = my + 'px';
-  });
-
-  (function loop() {
-    tx += (mx - tx) * 0.15;
-    ty += (my - ty) * 0.15;
-    t.style.left = tx + 'px';
-    t.style.top = ty + 'px';
-    requestAnimationFrame(loop);
-  })();
-
-  const hoverables = document.querySelectorAll('a, button, [data-flip], summary, .pillar, .tier-tab, .chip, .ct-btn, .right-card, .close-detail, .toc-dot, .anchor-copy');
-  hoverables.forEach(el => {
-    el.addEventListener('mouseenter', () => { c.classList.add('hover'); t.classList.add('hover'); });
-    el.addEventListener('mouseleave', () => { c.classList.remove('hover'); t.classList.remove('hover'); });
-  });
-})();
-
 /* ---------- PROGRESS + NAV ---------- */
 (function progress() {
   const bar = document.getElementById('scrollProgress');
