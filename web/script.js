@@ -584,32 +584,6 @@ const ScrollLock = (function(){
   mo.observe(navEl, { attributes: true, attributeFilter: ['class'] });
 })();
 
-/* ---------- MOBILE CTA VISIBILITY ---------- */
-(function mobileCta() {
-  const cta = document.getElementById('mobileCta');
-  if (!cta) return;
-  const footer = document.querySelector('.footer');
-  let pastHero = false, nearFooter = false;
-
-  function sync() {
-    cta.classList.toggle('visible', pastHero && !nearFooter);
-  }
-  const heroIO = new IntersectionObserver((entries) => {
-    pastHero = !entries[0].isIntersecting;
-    sync();
-  }, { threshold: 0.1 });
-  const hero = document.getElementById('top');
-  if (hero) heroIO.observe(hero);
-
-  if (footer) {
-    const footIO = new IntersectionObserver((entries) => {
-      nearFooter = entries[0].isIntersecting;
-      sync();
-    }, { threshold: 0.05 });
-    footIO.observe(footer);
-  }
-})();
-
 /* ---------- FONT SIZE CONTROL ---------- */
 (function fontCtrl() {
   const root = document.documentElement;
