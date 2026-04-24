@@ -1,5 +1,5 @@
 /* =========================================================
-   HCDN · Proyecto 1625-D-2026 — Interacciones
+   HCDN · Proyecto 1751-D-2026 — Interacciones
    ========================================================= */
 
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -806,7 +806,7 @@ const ScrollLock = (function(){
   const toast = document.getElementById('shareToast');
   if (!buttons.length) return;
 
-  const title = 'Proyecto 1625-D-2026 · Modernizar la protección de datos personales';
+  const title = 'Proyecto 1751-D-2026 · Modernizar la protección de datos personales';
   const text = 'Propuesta del diputado Martín Yeza para modernizar la Ley 25.326: proporcionalidad para PyMEs, reglas claras para IA y un sandbox regulatorio. Conocé la propuesta:';
   const getUrl = () => location.origin + location.pathname;
 

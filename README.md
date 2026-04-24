@@ -1,6 +1,6 @@
-# Ley de Datos Personales · Proyecto 1625-D-2026
+# Ley de Datos Personales · Proyecto 1751-D-2026
 
-Sitio explicativo, en primera persona, del **Proyecto de Ley 1625-D-2026** de modernización de la Ley 25.326 de Protección de Datos Personales, presentado por el diputado Martín Yeza en la Honorable Cámara de Diputados de la Nación Argentina.
+Sitio explicativo, en primera persona, del **Proyecto de Ley 1751-D-2026** de modernización de la Ley 25.326 de Protección de Datos Personales, presentado por el diputado Martín Yeza en la Honorable Cámara de Diputados de la Nación Argentina.
 
 Este proyecto es una de las tres iniciativas de reforma que hoy conviven en el Congreso argentino. El sitio busca explicarlo con tono humilde, sin exageraciones, desde la voz de su autor.
 
@@ -10,9 +10,9 @@ Este proyecto es una de las tres iniciativas de reforma que hoy conviven en el C
   - `index.html` — estructura del sitio
   - `styles.css` — estética institucional HCDN
   - `script.js` — interactividad (cursor custom, canvas, scroll-spy, command palette, focus trap, etc.)
-- `1625-D-2026.pdf` — texto oficial del proyecto de ley
-- `1625-D-2026.txt` — extracción textual para referencia
-- `Proyecto Yeza 1625-D-2026_ Reforma Pro-...pdf` — análisis ejecutivo
+- `1751-D-2026.pdf` — texto oficial del proyecto de ley
+- `1751-D-2026.txt` — extracción textual para referencia
+- `Proyecto Yeza 1751-D-2026_ Reforma Pro-...pdf` — análisis ejecutivo
 
 ## Stack
 
